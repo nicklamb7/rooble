@@ -1,0 +1,13 @@
+<div data-search-functions-target="list">
+  <% @functions.each do |function| %>
+    <div>
+      <p><small><%= function.type_id %></small></p>
+      <h3><%= link_to "#{function.name}", function %></h3>
+      <p><%= function.description %></p>
+      <% if policy(function).edit? %>
+        <p><%= link_to 'Edit', edit_function_path(function) %></p>
+        <p><%= link_to 'Destroy', function, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>

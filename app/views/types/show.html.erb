@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @type.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @type.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @type.user_id %>
+</p>
+<% if policy(@type).edit? %>
+  <%= link_to 'Edit', edit_type_path(@type) %> |
+<% end %>
+<%= link_to 'Back', types_path %>

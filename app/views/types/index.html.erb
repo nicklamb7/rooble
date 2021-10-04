@@ -1,0 +1,23 @@
+<div id="types-index-page">
+  <div class="index-container">
+    <div>
+      <% @types.each do |type| %>
+        <div>
+          <h3><%= link_to "#{type.name}", type %></h3>
+          <p><%= type.description %></p>
+          <% if policy(type).edit? %>
+            <p><%= link_to 'Edit', edit_type_path(type) %></p>
+            <p><%= link_to 'Destroy', type, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <br>
+
+  <% if policy(Type).create? %>
+    <%= link_to 'New Type', new_type_path %>
+  <% end %>
+  <p id="notice"><%= notice %></p>
+</div>

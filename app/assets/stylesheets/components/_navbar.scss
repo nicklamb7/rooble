@@ -1,6 +1,23 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  padding-bottom: 5px;
+  a {
+    margin-right: 16px;
+    color: #00000075;
+  }
+  .active {
+    color: #F42D23;
+    border-bottom: 4px solid #F42D23;
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ebebeb;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +26,65 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-left {
+  display: flex !important;
+  align-items: center !important;
+  height: 73px;
+  h1 {
+    font-family: 'Circular Std';
+    text-align: center;
+    font-weight: 900;
+    background: linear-gradient(#F42D23, #C7221B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .search-bar {
+    background: #fff;
+    display: flex;
+    border: none;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 44px;
+    margin: 0 16px;
+    width: 50vw;
+    max-width: 584px;
+    transition: .2s ease;
+    padding: 4px 14px;
+    box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+    &:hover {
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    }
+    input {
+      flex: 1;
+      display: flex;
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      padding: 0;
+      color: rgba(0,0,0,.87);
+      word-wrap: break-word;
+      outline: none;
+      display: flex;
+      flex: 100%;
+      -webkit-tap-highlight-color: transparent;
+      height: 34px;
+      font-size: 16px;
+    }
+  }
+}
+
+.navbar-bottom {
+  margin-left: 164px;
+  width: 652px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  a {
+    padding: 12px 12px 12px 12px;
+    margin-right: 8px;
+  }
 }

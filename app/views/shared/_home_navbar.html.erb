@@ -1,15 +1,12 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon border-bottom">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div>
-  <div class="navbar-left">
-    <%= link_to '/' do %>
-      <h1>Rooble</h1>
-    <% end %>
-    <div class="search-bar">
-      <input type="text" placeholder="Search for classes or methods..." />
-    </div>
+    <%= link_to 'Classes', types_path %>
+    <%= link_to 'Methods', functions_path %>
+  </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -34,19 +31,5 @@
         </li>
       <% end %>
     </ul>
-  </div>
-  </div>
-  <div class="navbar-bottom">
-    <% if current_page?("/types") %>
-      <%= link_to 'Classes', types_path, :class => "active" %>
-    <% else %>
-      <%= link_to 'Classes', types_path %>
-    <% end %>
-    <% if current_page?("/functions") %>
-      <%= link_to 'Methods', functions_path, :class => "active"  %>
-    <% else %>
-      <%= link_to 'Methods', functions_path %>
-    <% end %>
-  </div>
   </div>
 </div>
