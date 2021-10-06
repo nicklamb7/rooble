@@ -1,7 +1,7 @@
 <div>
   <% @functions.sort { |a, b| a.name <=> b.name }.each do |function| %>
     <div>
-      <p><small><%= function.type_id %></small></p>
+      <p><%= function.type.name %></p>
       <h3><%= link_to "#{function.name}", function %></h3>
       <p><%= function.description %></p>
       <% if policy(function).edit? %>

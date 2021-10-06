@@ -18,7 +18,7 @@
 
   <p>
     <strong>Type:</strong>
-    <%= @function.type_id %>
+    <%= @function.type.name %>
   </p>
 
   <% if policy(@function).edit? %>
