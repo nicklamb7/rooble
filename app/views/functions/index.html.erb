@@ -1,17 +1,5 @@
 <div id="functions-index-page">
-  <div data-controller="search-functions" class="index-container">
-    <%= form_with url: functions_path, method: :get, html: { class:
-    '', data: { search_functions_target: 'form' } } do |f| %>
-      <%= f.text_field :query,
-                      class: "form-control",
-                      placeholder: 'Type a function title',
-                      value: params[:query],
-                      data: {
-                        search_functions_target: 'input',
-                        action: 'keyup->search_functions#update'
-                      } %>
-      <% end %>
-
+  <div class="index-container">
     <%= render 'list', functions: @functions %>
   </div>
 
