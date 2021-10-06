@@ -1,26 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div id="functions-show-page">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @function.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @function.name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @function.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @function.description %>
+  </p>
 
-<p>
-  <strong>Example:</strong>
-  <%= @function.example %>
-</p>
+  <p>
+    <strong>Example:</strong>
+    <%= @function.example %>
+  </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @function.type_id %>
-</p>
+  <p>
+    <strong>Type:</strong>
+    <%= @function.type_id %>
+  </p>
 
-<% if policy(@function).edit? %>
-  <%= link_to 'Edit', edit_function_path(@function) %> |
-<% end %>
-<%= link_to 'Back', functions_path %>
+  <% if policy(@function).edit? %>
+    <%= link_to 'Edit', edit_function_path(@function) %> |
+  <% end %>
+  <%= link_to 'Back', functions_path %>
+</div>
