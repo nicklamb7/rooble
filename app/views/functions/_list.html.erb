@@ -1,5 +1,5 @@
 <div>
-  <% @functions.each do |function| %>
+  <% @functions.sort { |a, b| a.name <=> b.name }.each do |function| %>
     <div>
       <p><small><%= function.type_id %></small></p>
       <h3><%= link_to "#{function.name}", function %></h3>

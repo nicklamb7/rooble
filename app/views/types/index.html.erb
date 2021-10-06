@@ -1,7 +1,7 @@
 <div id="types-index-page">
   <div class="index-container">
     <div>
-      <% @types.each do |type| %>
+      <% @types.sort { |a, b| a.name <=> b.name }.each do |type| %>
         <div>
           <h3><%= link_to "#{type.name}", type %></h3>
           <p><%= type.description %></p>
