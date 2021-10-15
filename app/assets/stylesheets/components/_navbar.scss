@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -33,9 +35,9 @@
   align-items: center !important;
   height: 73px;
   h1 {
-    font-family: 'Circular Std';
+    font-family: 'Circular Std','Montserrat', sans-serif;
     text-align: center;
-    font-weight: 900;
+    font-weight: 700;
     background: linear-gradient(#F42D23, #C7221B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
