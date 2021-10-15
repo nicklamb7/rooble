@@ -79,6 +79,18 @@
   }
 }
 
+.navbar-container .row {
+  width: calc(100vw - 32px);
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0px;
+  .navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
 .navbar-bottom {
   margin-left: 164px;
   width: 652px;
@@ -101,6 +113,7 @@
   .navbar-bottom a {
     padding: 22px 4px 2px 4px;
     border-bottom: 4px solid transparent;
+    font-size: 14px;
   }
   .navbar-left {
     flex-direction: column;
