@@ -95,4 +95,21 @@
   .navbar-toggler {
     display: none;
   }
+  .navbar-bottom {
+    margin-left: 0px;
+  }
+  .navbar-bottom a {
+    padding: 22px 4px 2px 4px;
+    border-bottom: 4px solid transparent;
+  }
+  .navbar-left {
+    flex-direction: column;
+    width: calc(100vw - 32px);
+    .search-bar {
+      width: calc(100vw - 32px);
+    }
+  }
+  .navbar-lewagon h1 {
+    font-size: 24px;
+  }
 }
