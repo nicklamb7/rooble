@@ -7,3 +7,10 @@
     width: 652px;
   }
 }
+
+@media only screen and (max-width: 576px) {
+  #types-index-page .index-container {
+    margin: 16px;
+    width: 90%;
+  }
+}
