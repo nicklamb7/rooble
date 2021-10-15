@@ -3,8 +3,8 @@
     <div>
       <% @types.sort { |a, b| a.name <=> b.name }.each do |type| %>
         <div>
-          <h3><%= link_to "#{type.name}", type %></h3>
-          <p><%= type.description %></p>
+          <p><big><%= link_to "#{type.name}", type %></big></p>
+          <p><%= type.description.truncate(140, separator: ' ') %></p>
           <% if policy(type).edit? %>
             <p><%= link_to 'Edit', edit_type_path(type) %></p>
             <p><%= link_to 'Destroy', type, method: :delete, data: { confirm: 'Are you sure?' } %></p>
