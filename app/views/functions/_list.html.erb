@@ -1,8 +1,7 @@
 <div>
   <% @functions.sort { |a, b| a.name <=> b.name }.each do |function| %>
     <div>
-      <small><%= function.type.name %></small>
-      <p><big><%= link_to "#{function.name}", function %></big></p>
+      <p><big><%= link_to "#{function.name}", function %></big> · <small><%= function.type.name %></small></p>
       <p><%= function.description.truncate(140, separator: ' ') %></p>
       <% if policy(function).edit? %>
         <p><%= link_to 'Edit', edit_function_path(function) %></p>
