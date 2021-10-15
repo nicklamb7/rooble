@@ -2,23 +2,20 @@
   <p id="notice"><%= notice %></p>
 
   <p>
-    <strong>Name:</strong>
-    <%= @function.name %>
+    <%= link_to "#{@function.type.name}", controller: "types", action: "show", id: @function.type %>
   </p>
 
+  <h3>
+    <%= @function.name %>
+  </h3>
+
   <p>
-    <strong>Description:</strong>
     <%= @function.description %>
   </p>
 
   <p>
-    <strong>Example:</strong>
+    Example:
     <%= @function.example %>
-  </p>
-
-  <p>
-    <strong>Type:</strong>
-    <%= @function.type.name %>
   </p>
 
   <% if policy(@function).edit? %>
