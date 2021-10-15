@@ -18,3 +18,8 @@
 @import "types/index";
 @import "types/show";
 @import "types/new";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

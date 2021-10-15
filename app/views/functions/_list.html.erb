@@ -2,7 +2,7 @@
   <% @functions.sort { |a, b| a.name <=> b.name }.each do |function| %>
     <div>
       <p><big><%= link_to "#{function.name}", function %></big> · <small><%= function.type.name %></small></p>
-      <p><%= function.description.truncate(140, separator: ' ') %></p>
+      <p class="description-text"><%= function.description.truncate(140, separator: ' ') %></p>
       <% if policy(function).edit? %>
         <p><%= link_to 'Edit', edit_function_path(function) %></p>
         <p><%= link_to 'Destroy', function, method: :delete, data: { confirm: 'Are you sure?' } %></p>
