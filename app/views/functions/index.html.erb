@@ -1,12 +1,10 @@
 <div id="functions-index-page">
   <div class="index-container">
+    <% if policy(Function).create? %>
+      <p><%= link_to 'New Function', new_function_path %></p>
+    <% end %>
     <%= render 'list', functions: @functions %>
   </div>
-
   <br>
-
-  <% if policy(Function).create? %>
-    <%= link_to 'New Function', new_function_path %>
-  <% end %>
   <p id="notice"><%= notice %></p>
 </div>
