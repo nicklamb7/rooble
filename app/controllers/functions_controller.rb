@@ -11,6 +11,13 @@ class FunctionsController < ApplicationController
       format.html # Follow regular flow of Rails
       format.text { render partial: 'functions/list', locals: { functions: @functions }, formats: [:html] }
     end
+
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR description ILIKE :query"
+      @functions = Function.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @functions = Function.all
+    end
   end
 
   # GET /functions/1 or /functions/1.json

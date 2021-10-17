@@ -2,7 +2,14 @@
   <div class="container">
     <h1>Rooble</h1>
     <div class="search-bar">
-      <input type="text" placeholder="Search for classes or methods..." />
+      <%= form_tag functions_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search for classes or methods..."
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 </div>
