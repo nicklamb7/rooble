@@ -13,7 +13,7 @@ class FunctionsController < ApplicationController
     end
 
     if params[:query].present?
-      sql_query = "name ILIKE :query OR description ILIKE :query"
+      sql_query = "name ILIKE :query OR description ILIKE :query OR example ILIKE :query"
       @functions = Function.where(sql_query, query: "%#{params[:query]}%")
     else
       @functions = Function.all
