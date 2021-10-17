@@ -33,6 +33,11 @@
       </div>
     </div>
     <div class="navbar-bottom">
+      <% if current_page?("/search") %>
+        <%= link_to 'All', search_path, :class => "active" %>
+      <% else %>
+        <%= link_to 'All', search_path %>
+      <% end %>
       <% if current_page?("/types") %>
         <%= link_to 'Classes', types_path, :class => "active" %>
       <% else %>
