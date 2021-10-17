@@ -35,12 +35,16 @@
   align-items: center !important;
   height: 73px;
   h1 {
-    font-family: 'Circular Std','Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-weight: 700;
+    font-size: 28px;
     background: linear-gradient(#F42D23, #C7221B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  a {
+    width: 116px;
   }
   a:hover {
     text-decoration: none !important;
@@ -57,7 +61,7 @@
     width: 50vw;
     max-width: 584px;
     transition: .2s ease;
-    padding: 4px 14px;
+    padding: 4px 16px;
     box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
     &:hover {
       box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
