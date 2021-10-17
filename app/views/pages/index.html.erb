@@ -2,7 +2,7 @@
   <div class="index-container">
     <% if @types.count > 0 %>
     <div class="class-container">
-      <h4>Classes:</h4>
+      <h5>Classes</h5>
       <% @types.sort { |a, b| a.name <=> b.name }.each do |type| %>
         <div>
           <p><big><%= link_to "#{type.name}", type %></big></p>
@@ -11,6 +11,9 @@
       <% end %>
     </div>
     <% end %>
-    <%= render 'functions/list', functions: @functions %>
+    <% if @functions.count > 0 %>
+      <h5>Methods</h5>
+      <%= render 'functions/list', functions: @functions %>
+    <% end %>
   </div>
 </div>
