@@ -5,7 +5,7 @@
       <h5>Classes</h5>
       <% @types.sort { |a, b| a.name <=> b.name }.each do |type| %>
         <div>
-          <p><big><%= link_to "#{type.name}", type %></big></p>
+          <p><big><%= link_to "#{type.name}", type %></big> · <small>Class</small></p>
           <p class="description-text"><%= type.description.truncate(140, separator: ' ') %></p>
         </div>
       <% end %>
