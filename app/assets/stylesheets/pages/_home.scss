@@ -9,7 +9,7 @@
     font-family: 'Montserrat', sans-serif;;
     text-align: center;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 64px;
     font-style: normal;
     background: linear-gradient(#F42D23, #C7221B);
     -webkit-background-clip: text;
@@ -79,5 +79,11 @@
     small {
       color: #00000075;
     }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #home-page h1 {
+    font-size: 48px;
   }
 }
