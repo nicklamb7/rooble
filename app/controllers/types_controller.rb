@@ -6,6 +6,13 @@ class TypesController < ApplicationController
   def index
     # @types = Type.all
     @types = policy_scope(Type).sort
+
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR description ILIKE :query"
+      @types = Type.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @types = Type.all
+    end
   end
 
   # GET /types/1 or /types/1.json
