@@ -1,0 +1,84 @@
+<div class="search-bar">
+  <% if current_page?(controller: 'devise/sessions', action: 'new') %>
+    <%= form_tag search_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Search for classes or methods..."
+      %>
+      <%= submit_tag "", class: "btn" %>
+    <% end %>
+  <% elsif current_page?(controller: 'devise/passwords', action: 'new') %>
+    <%= form_tag search_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Search for classes or methods..."
+      %>
+      <%= submit_tag "", class: "btn" %>
+    <% end %>
+  <% elsif current_page?(controller: 'devise/passwords', action: 'edit') %>
+    <%= form_tag search_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Search for classes or methods..."
+      %>
+      <%= submit_tag "", class: "btn" %>
+    <% end %>
+  <% elsif current_page?(controller: 'devise/registrations', action: 'cancel') %>
+    <%= form_tag search_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Search for classes or methods..."
+      %>
+      <%= submit_tag "", class: "btn" %>
+    <% end %>
+  <% elsif current_page?(controller: 'devise/registrations', action: 'new') %>
+    <%= form_tag search_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Search for classes or methods..."
+      %>
+      <%= submit_tag "", class: "btn" %>
+    <% end %>
+  <% elsif current_page?(controller: 'devise/registrations', action: 'edit') %>
+    <%= form_tag search_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Search for classes or methods..."
+      %>
+      <%= submit_tag "", class: "btn" %>
+    <% end %>
+  <% elsif current_page?(controller: 'types', action: 'index') %>
+    <%= form_tag types_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Search for classes..."
+      %>
+      <%= submit_tag "", class: "btn" %>
+    <% end %>
+  <% elsif current_page?(controller: 'functions', action: 'index') %>
+    <%= form_tag functions_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Search for methods..."
+      %>
+      <%= submit_tag "", class: "btn" %>
+    <% end %>
+  <% else %>
+    <%= form_tag search_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-input",
+        placeholder: "Search for classes or methods..."
+      %>
+      <%= submit_tag "", class: "btn" %>
+    <% end %>
+  <% end %>
+</div>

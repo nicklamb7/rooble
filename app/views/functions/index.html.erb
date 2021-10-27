@@ -1,6 +1,6 @@
 <div id="functions-index-page">
   <div class="index-container">
-    <% if policy(Function).create? %>
+    <% if user_signed_in? %>
       <p><%= link_to 'New Function', new_function_path %></p>
     <% end %>
     <%= render 'list', functions: @functions %>

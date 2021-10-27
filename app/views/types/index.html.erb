@@ -16,7 +16,7 @@
 
   <br>
 
-  <% if policy(Type).create? %>
+  <% if user_signed_in? %>
     <%= link_to 'New Type', new_type_path %>
   <% end %>
   <p id="notice"><%= notice %></p>
